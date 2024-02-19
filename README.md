@@ -48,6 +48,6 @@ chmod +x init.sh
 
 ### Redes
 
-[![Linkedin Badge](https://img.shields.io/badge/-( Crystina_G )-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/crystina-g-cristina-gonzalez-9337b0233/)
+[![Linkedin Badge](https://img.shields.io/badge/-Crystina_G-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/crystina-g-cristina-gonzalez-9337b0233/)
 
 [![Youtube Badge](https://img.shields.io/badge/-Crystina_G-darkred?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCk8LWXwUU3iu9NSj6bPn7zA)
