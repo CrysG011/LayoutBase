@@ -1,0 +1,18 @@
+image: docker:latest
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_HOST: tcp://docker:2375/
+
+services:
+  - docker:dind
+
+pages:
+  script:
+    - docker build -t layout .
+    - docker run --name static -d -p 80:80 layout
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
