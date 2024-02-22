@@ -1,0 +1,34 @@
+name: Publish Docker Container
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.SECRET_LAYOUT }}
+
+      - name: Build and push the Docker image
+        run: docker build . --tag ghcr.io/CrysG011/LayoutBase-v2:latest
+          docker push ghcr.io/CrysG011/LayoutBase-v2:latest
+
+  deploy:
+    needs: create-docker-image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.SECRET_LAYOUT }}
+          publish_dir: ./public
