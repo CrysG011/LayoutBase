@@ -81,7 +81,7 @@ body {
   font-size: clamp (1rem, 2.5vw, 2rem);
   font-weight: 400;
   line-height: 1em;
-  width: 100%;
+  width: 100vw;
   background-color: var(--bg-color);
   color: var(--text-color);
   -webkit-hyphens: auto;
@@ -90,7 +90,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: .5s background-color, color .5s;
-  overflow-x: hidden;
+
   position: relative;
   scrollbar-color: rgba(203, 127, 108, 0.471) hsla(12, 48%, 61%);
 }
@@ -146,11 +146,12 @@ select {
 
 /*Buscar efectos de sombras en neumorphism.io*/
 .header {
+  display: flex;
   position: fixed;
   width: 100%;
   height: fit-content;
-  display: flex;
   z-index: 1;
+  padding-top: 1em;
 }
 
 .nav {
@@ -380,6 +381,7 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 1em;
   animation: up .8s ease-in;
 }
 
@@ -501,7 +503,6 @@ select {
   justify-content: center;
   gap: .9em;
   text-wrap: pretty;
-  font-size: 1.3em;
   width: 100%;
   line-height: 1.3em;
   margin: 0 auto;

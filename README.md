@@ -22,23 +22,33 @@ Utilizo este proyecto para poner en práctica lo aprendido sobre contenedores.
 sudo usermod -aG docker tu_usuario && newgrp docker
 ```
 
+- Se necesita tener una cuenta en dockerhub para ingresar con usuario y contraseña:
+
+```bash
+docker login
+```
+
 - Descarga la imagen:
 
 ```bash
-docker pull layout
+docker pull crystinag/layout:latest
 ```
 
-- Dar permisos de ejecución al script:
+- Correr el contenedor:
 
 ```bash
-chmod +x init.sh
+docker run -d --name static -p 8080:80 crystinag/layout
 ```
 
-- Ejecutarlo para correr el contenedor:
+- Accede desde tu navegador al localhost:8080
+
+**Para encontrar la ubicación de la raíz del directorio de Docker en tu sistema, puedes ejecutar el siguiente comando en la terminal:**
 
 ```bash
-./init.sh
+docker system info --format '{{.DockerRootDir}}'
 ```
+
+**Dentro de esa ruta encontrarás la carpeta image que contiene todas las imágenes descargadas.**
 
 ## ⚡ Technologies
 
