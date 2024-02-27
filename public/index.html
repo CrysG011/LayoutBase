@@ -23,39 +23,37 @@
 
 <body>
     <header class="header">
-        <nav class="nav container" id="nav">
-            <h1 class="nav__logo">
-                <div class="main">
-                    <figure class="main__light">
-                        <img id="sun" src="./assets/sun.svg" alt="Modo claro">
-                    </figure>
-                    <figure class="main__dark">
-                        <img id="moon" src="./assets/moon.svg" alt="Modo oscuro">
-                    </figure>
-                </div>
-                <div class="main__switcher">
-                    <input type="checkbox" class="main__check">
-                    <div class="main__option"></div>
-                </div>
-            </h1>
-            <ul class="nav__links">
-                <li class="nav__item">
+        <main class="theme">
+            <div class="main">
+                <figure class="main__light">
+                    <img id="sun" src="./assets/sun.svg" alt="Modo claro">
+                </figure>
+                <figure class="main__dark">
+                    <img id="moon" src="./assets/moon.svg" alt="Modo oscuro">
+                </figure>
+            </div>
+            <div class="main__switcher">
+                <input type="checkbox" class="main__check">
+                <div class="main__option"></div>
+            </div>
+        </main>
+        <input type="checkbox" name="Menu" id="menu-button-check">
+        <label for="menu-button-check">≡</label>
+        <nav class="menu">
+            <ul class="menu-lateral">
+                <li class="menu-lateral__item">
                     <a href="#servicios" class="nav__link">Servicios</a>
                 </li>
-                <li class="nav__item">
+                <li class="menu-lateral__item">
                     <a href="#modelos" class="nav__link">Modelos</a>
                 </li>
-                <li class="nav__item">
+                <li class="menu-lateral__item">
                     <a href="#creditos" class="nav__link">Acerca de</a>
                 </li>
             </ul>
-            <a href="#nav" class="nav__hamburguer">
-                <img src="./assets/menu.svg" class="nav__icon">
-            </a>
-            <a href="#" class="nav__close">
-                <img src="./assets/close.svg" class="nav__icon">
-            </a>
         </nav>
+
+
     </header>
     <section class="intro" id="inicio">
         <div class="carrousel">
@@ -78,7 +76,7 @@
             </ul>
         </div>
         <figure class="servicios__figure">
-            <img src="./assets/isla.png" class="servicios__img" data-animation="fade" title="Foto generada con hotpot"
+            <img src="./assets/isla.png" class="servicios__img" data-animation="appear" title="Foto generada con hotpot"
                 alt="Mockup">
         </figure>
     </section>
