@@ -96,7 +96,7 @@ body {
 }
 
 body::after {
-  content: url('https://cdn.pixabay.com/photo/2022/05/04/14/19/network-7174082_1280.png');
+  content: url('../assets/LAYOUTfondo.webp');
   position: fixed;
   bottom: 14rem;
   width: 100%;
@@ -375,8 +375,8 @@ label[for=menu-button-check]:nth-of-type(1) {
   font-family: inherit;
 }
 
-.checkbox__hack:checked~.menu-lateral {
-  display: flex;
+.menu-lateral__item {
+  display: block;
 }
 
 .nav__link {
@@ -387,15 +387,7 @@ label[for=menu-button-check]:nth-of-type(1) {
   border-radius: 1em;
   display: flex;
   height: fit-content;
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
-  -ms-border-radius: 1em;
-  -o-border-radius: 1em;
   transition: all .2s ease-in-out;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
 }
 
 .nav__link:hover {
@@ -403,11 +395,6 @@ label[for=menu-button-check]:nth-of-type(1) {
 }
 
 @media (min-width: 768px) {
-  .menu {
-    display: inline-block;
-    width: 00%;
-  }
-
   .menu-lateral {
     flex-direction: row;
     justify-content: flex-end;
@@ -416,10 +403,6 @@ label[for=menu-button-check]:nth-of-type(1) {
     gap: 1.5em;
     top: .3em;
     right: .5em;
-  }
-
-  .menu-lateral__item {
-    display: inline-block;
   }
 }
 
@@ -624,7 +607,7 @@ details[close] {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: fit-content;
+  height: auto;
   transition: all 0.4s ease;
   border-radius: 1em;
   box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
@@ -639,7 +622,7 @@ details[close] {
   -moz-border-radius: var(--boton-border-radius);
   -ms-border-radius: var(--boton-border-radius);
   -o-border-radius: var(--boton-border-radius);
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
 }
 
 [data-animation="appear"] {
@@ -668,11 +651,15 @@ details[close] {
   -moz-transition: .3s ease-in .3s;
   -ms-transition: .3s ease-in .3s;
   -o-transition: .3s ease-in .3s;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
 }
 
 [data-animation="up"] {
   opacity: 0;
-  transform: translateY(100%);
+  transform: translateY(100deg);
   transition: .3s ease-in .3s;
   --opacity: 1;
   --transform: translateY(0);
@@ -680,6 +667,10 @@ details[close] {
   -moz-transition: .3s ease-in .3s;
   -ms-transition: .3s ease-in .3s;
   -o-transition: .3s ease-in .3s;
+  -webkit-transform: translateY(100deg);
+  -moz-transform: translateY(100deg);
+  -ms-transform: translateY(100deg);
+  -o-transform: translateY(100deg);
 }
 
 .unset {
@@ -1025,7 +1016,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(https://media1.giphy.com/media/3oEdv5ShMCqf2s2NgI/giphy.gif?cid=ecf05e47i0x9fvwkubwn3cvw7c6svmui6bkphxadylblprie&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+  background-image: url("../assets/giffondo.webp");
   background-size: cover;
   background-position: bottom;
   color: transparent;

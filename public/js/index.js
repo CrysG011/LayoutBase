@@ -33,49 +33,42 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   setInterval(desplazarCarrusel, 3000); /* Cambio de imagen cada 3 segundos */
-});
 
-const images = document.querySelectorAll(".servicios__figure");
-function triggerAnimation(entries) {
-  entries.forEach((entry) => {
-    const image = entry.target.querySelector("img");
-    image.classList.toggle("unset", entry.isIntersecting);
+  const images = document.querySelectorAll(".servicios__figure img");
+  function triggerAnimation(entries) {
+    entries.forEach((entry) => {
+      const image = entry.target;
+      image.classList.toggle("unset", entry.isIntersecting);
+    });
+  }
+  const observer = new IntersectionObserver(triggerAnimation, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
   });
-}
-const options = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 1,
-};
-const observer = new IntersectionObserver(triggerAnimation, options);
-images.forEach((image) => {
-  observer.observe(image);
-});
+  images.forEach((image) => {
+    observer.observe(image);
+  });
 
-const botonIndividual = document.querySelector(".individual");
-const botonFamiliar = document.querySelector(".familiar");
-const planIndividual = document.getElementById("individual");
-const planFamiliar = document.getElementById("familiar");
-const botonIncluye = document.getElementById("incluye");
-const planDesplegable = document.querySelector(".plan__desplegable");
+  const planIndividual = document.getElementById("individual");
+  const planFamiliar = document.getElementById("familiar");
+  const botonIncluye = document.getElementById("incluye");
+  const planDesplegable = document.querySelector(".plan__desplegable");
 
-const mostrarPlanes = (tipoPlan) => {
-  if (tipoPlan === "individual") {
-    planIndividual.style.display = "block";
-    planFamiliar.style.display = "none";
-  } else if (tipoPlan === "familiar") {
-    planIndividual.style.display = "none";
-    planFamiliar.style.display = "block";
-  }
-};
+  const mostrarPlanes = (tipoPlan) => {
+    planIndividual.style.display = tipoPlan === "individual" ? "block" : "none";
+    planFamiliar.style.display = tipoPlan === "familiar" ? "block" : "none";
+  };
 
-botonIndividual.addEventListener("click", () => mostrarPlanes("individual"));
-botonFamiliar.addEventListener("click", () => mostrarPlanes("familiar"));
+  document
+    .querySelector(".individual")
+    .addEventListener("click", () => mostrarPlanes("individual"));
+  document
+    .querySelector(".familiar")
+    .addEventListener("click", () => mostrarPlanes("familiar"));
 
-botonIncluye.addEventListener("click", () => {
-  if (planDesplegable.style.display === "block") {
-    planDesplegable.style.display = "none";
-  } else {
-    planDesplegable.style.display = "block";
-  }
+  botonIncluye.addEventListener("click", () => {
+    planDesplegable.style.display =
+      planDesplegable.style.display === "block" ? "none" : "block";
+  });
 });
