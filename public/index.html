@@ -9,16 +9,9 @@
     <!--Si tienes fuentes que son críticas para el rendimiento de la página,Si estás utilizando fuentes hospedadas en un dominio diferente o proporcionadas por un servicio de CDN,para Fuentes Grandes o Muchas Fuentes: 
     -- AGREGA esta línea con las modificaciones correspondientes:
     <link rel="preload" href="/fonts/Inconsolata-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">-->
-    <link rel="icon" type="image/png" href="./assets/logoCG.png">
+    <link rel="icon" type="image/webp" href="./assets/logoCG.webp">
     <link rel="stylesheet" href="./css/style.css">
-    <script>
-        const storageTheme = localStorage.getItem('theme');
-        const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
-        const newTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-        document.documentElement.setAttribute('data-theme', newTheme);
-    </script>
+    <script defer src="./js/index.js"></script>
 </head>
 
 <body>
@@ -206,7 +199,7 @@
     <footer class="pie">
         <div class="pie__contain">
             <div class="pie__logo">
-                <img src="./assets/logoCG.png" alt="logo" title="MiLogo">
+                <img src="./assets/logoCG.webp" alt="logo" title="MiLogo">
             </div>
             <!--Noten como CAMBIA la animación al ejecutarse en FIREFOX y Chrome, compara tiempos de carga, modo claro y oscuro y detección de fuentes entre otros-->
             <div class="pie__text">
@@ -227,7 +220,6 @@
             </div>
         </div>
     </footer>
-    <script defer src="./js/index.js"></script>
 </body>
 
 </html>

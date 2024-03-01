@@ -2,17 +2,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const switcherTheme = document.querySelector(".main__check");
   const root = document.documentElement;
 
-  if (localStorage.getItem("theme") === "dark") {
-    document.documentElement.setAttribute("data-theme", "dark");
-    switcherTheme.checked = true;
-  }
+  const systemColorScheme = window.matchMedia("(prefers-color-scheme: dark)")
+    .matches
+    ? "dark"
+    : "light";
+  const storedTheme = localStorage.getItem("theme");
+  const currentTheme = storedTheme || systemColorScheme;
+
+  root.setAttribute("data-theme", currentTheme);
+  switcherTheme.checked = currentTheme === "dark";
 
   function toggleTheme() {
-    const setTheme = this.checked ? "dark" : "light";
+    const setTheme = switcherTheme.checked ? "dark" : "light";
     root.setAttribute("data-theme", setTheme);
 
     localStorage.setItem("theme", setTheme);
-    console.log("Función toggleTheme ejecutada");
   }
 
   switcherTheme.addEventListener("change", toggleTheme);
