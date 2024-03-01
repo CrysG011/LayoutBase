@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const switcherTheme = document.querySelector(".main__check");
   const root = document.documentElement;
 
@@ -16,9 +16,7 @@ window.addEventListener("load", function () {
   }
 
   switcherTheme.addEventListener("change", toggleTheme);
-});
 
-window.addEventListener("load", function () {
   const carrousel = document.querySelector(".carrousel__container");
   const imgWidth = document.querySelector(".img").offsetWidth;
   let desplazamiento = 0;

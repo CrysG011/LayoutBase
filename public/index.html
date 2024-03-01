@@ -33,7 +33,8 @@
                 </figure>
             </div>
             <div class="main__switcher">
-                <input type="checkbox" class="main__check">
+                <input type="checkbox" id="themeSwitch" class="main__check">
+                <label for="themeSwitch" class="main__label"></label>
                 <div class="main__option"></div>
             </div>
         </main>
@@ -74,7 +75,7 @@
             </ul>
         </div>
         <figure class="servicios__figure">
-            <img src="./assets/isla.webp" class="servicios__img" data-animation="appear"
+            <img src="./assets/isla.webp" loading="lazy" class="servicios__img" data-animation="appear"
                 title="Foto generada con hotpot" alt="Mockup">
         </figure>
     </section>
@@ -89,13 +90,13 @@
                 <li class="servicios__li"><a href="http://hotpot.ai/art-generator" target="_blank"
                         rel="noopener noreferrer">Hotpot &#x1F4CE; &#x2699;</a></li>
                 <li class="deco__li">PALETA de COLORES a partir de IMAGEN</li>
-                <button class="servicios__li planes__boton"><a href="https://colorpalette.imageonline.co/es/"
+                <li class="servicios__li planes__boton"><a href="https://colorpalette.imageonline.co/es/"
                         target="_blank">PROBAR
-                        colorpalette</a></button>
+                        colorpalette</a></li>
             </ul>
         </div>
         <figure class="servicios__figure reducida">
-            <img src="assets/lupa.webp" class="servicios__img" data-animation="up" alt="Lounge site">
+            <img src="assets/lupa.webp" loading="lazy" class="servicios__img" data-animation="up" alt="Lounge site">
             <figcaption class="tooltip-text">Imagen generada con BlueWillow</figcaption>
         </figure>
     </section>
@@ -119,13 +120,13 @@
             </div>
         </div>
         <figure class="servicios__figure">
-            <img src="assets/salalounge3.webp" class="servicios__img" data-animation="show"
+            <img src="assets/salalounge3.webp" loading="lazy" class="servicios__img" data-animation="show"
                 title="Foto generada con wepik" alt="Tramites">
         </figure>
     </section>
     <section class="self" id="modelos">
         <div class="self__grid">
-            <img src="assets/salalounge2.webp" alt="Imagen creada con wepik">
+            <img src="assets/salalounge2.webp" loading="lazy" alt="Imagen creada con wepik">
             <p class="self__text">CSS Portal es un recurso para generar Clip-Path y lograr un efecto como este</p>
             <p><a class="planes__boton" href="https://www.cssportal.com/css-clip-path-generator/" target="_blank"
                     rel="noopener noreferrer">IR a CSS Portal
@@ -209,7 +210,7 @@
             </div>
             <!--Noten como CAMBIA la animación al ejecutarse en FIREFOX y Chrome, compara tiempos de carga, modo claro y oscuro y detección de fuentes entre otros-->
             <div class="pie__text">
-                <h2>Ngnix-Docker</h2>
+                <h2>Ngnix+Docker</h2>
             </div>
             <div class="pie__redes">
                 <a href="https://gitlab.com/crystinagonz/layoutbase.git" target="_blank" rel="noopener noreferrer">
