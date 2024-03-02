@@ -6,6 +6,7 @@ Utilizo este proyecto para poner en práctica lo aprendido sobre contenedores.
 
 > [!NOTE]
 > Dockerizado con imagen base Ngnix
+> En Github falta configurar las actions para el despliegue en Github Pages.
 
 > [!TIP]
 > Si estás del lado del backend te sirve para trabajarlo en algún framework
