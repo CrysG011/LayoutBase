@@ -1,11 +1,11 @@
-# Landing Frontend <img src="./assets/estrellas.gif" width="30">
+# Layout Frontend <img src="./assets/estrellas.gif" width="30">
 
 Utilizo este proyecto para poner en práctica lo aprendido sobre contenedores.
 
 [VER en Gitlab Pages](https://layoutbase-crystinagonz-08fe74406ecbceff0ea6eaa6c57716c32e16cd1.gitlab.io/)
 
 > [!NOTE]
-> Dockerizado con imagen base Ngnix
+> Dockerizado con imagen base Ngnix.
 > En Github falta configurar las actions para el despliegue en Github Pages.
 
 > [!TIP]
