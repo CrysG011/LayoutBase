@@ -57,6 +57,8 @@ docker system info --format '{{.DockerRootDir}}'
 ![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
 ![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=git)
 ![GitLab](https://img.shields.io/badge/-GitLab-orange?style=flat-square&logo=gitlab)
+![Docker](https://img.shields.io/badge/-Docker-black?style=flat-square&logo=docker)
+![Nginx](https://img.shields.io/badge/-Nginx-black?style=flat-square&logo=nginx)
 
 ### Redes
 
