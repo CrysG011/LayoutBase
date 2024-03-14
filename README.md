@@ -9,13 +9,13 @@ Utilizo este proyecto para poner en práctica lo aprendido sobre contenedores.
 > En Github falta configurar las actions para el despliegue en Github Pages.
 
 > [!TIP]
-> Si estás del lado del backend te sirve para trabajarlo en algún framework
+> Si estás del lado del backend te sirve para trabajarlo en algún framework. El css está minificado, la extensión "Prettier" de VS Code lo desminifica o herramientas como Beautify CSS.
 
 > [!WARNING]
 > Debes tener docker instalado, si no lo necesitas puedes clonarte el repositorio y modificarlo según tus necesidades.
 
 > [!IMPORTANT]
-> Operar como usuario, NO como root. Chequear grupos del usuario con el comando "id -nG"
+> Operar como usuario, evitar hacerlo como root. Chequear grupos del usuario con el comando "id -nG"
 
 - Si tu usuario no está en el grupo "docker" agrégalo:
 
