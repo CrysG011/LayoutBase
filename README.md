@@ -1,57 +1,26 @@
 # Layout Frontend <img src="./assets/estrellas.gif" width="30">
 
-Utilizo este proyecto para poner en práctica lo aprendido sobre contenedores.
+Utilizo este proyecto para poner en práctica lo aprendido sobre contenedores y animaciones.
 
 [VER en Gitlab Pages](https://layoutbase-crystinagonz-08fe74406ecbceff0ea6eaa6c57716c32e16cd1.gitlab.io/)
 
 > [!NOTE]
-> Dockerizado con imagen base Ngnix.
-> En Github falta configurar las actions para el despliegue en Github Pages.
+> El código original que utiliza docker se encuentra en el repositorio de GitLab
+
+[VER código dockerizado](https://gitlab.com/crystinagonz/layoutbase)
 
 > [!TIP]
 > Si estás del lado del backend te sirve para trabajarlo en algún framework. El css está minificado, la extensión "Prettier" de VS Code lo desminifica o herramientas como Beautify CSS.
 
-> [!WARNING]
-> Debes tener docker instalado, si no lo necesitas puedes clonarte el repositorio y modificarlo según tus necesidades.
-
 > [!IMPORTANT]
-> Operar como usuario, evitar hacerlo como root. Chequear grupos del usuario con el comando "id -nG"
+> Se eliminaron archivos innecesarios como los referidos a docker y otros para reducir las emisiones de carbono del sitio, motivo por el cual se mantiene desplegado en Cloudflare
 
-- Si tu usuario no está en el grupo "docker" agrégalo:
+## Optimiza todo posible:
 
-```bash
-sudo usermod -aG docker tu_usuario && newgrp docker
-```
+[Reducir emisiones MEJORA la performance](https://ecograder.com/)
+[Calcula el impacto de tu sitio web en el planeta](https://www.websitecarbon.com/)
 
-- Se necesita tener una cuenta en dockerhub para ingresar con usuario y contraseña:
-
-```bash
-docker login
-```
-
-- Descarga la imagen:
-
-```bash
-docker pull crystinag/layout:latest
-```
-
-- Correr el contenedor:
-
-```bash
-docker run -d --name static -p 8080:80 crystinag/layout
-```
-
-- Accede desde tu navegador al localhost:8080
-
-**Para encontrar la ubicación de la raíz del directorio de Docker en tu sistema, puedes ejecutar el siguiente comando en la terminal:**
-
-```bash
-docker system info --format '{{.DockerRootDir}}'
-```
-
-**Dentro de esa ruta encontrarás la carpeta image que contiene todas las imágenes descargadas.**
-
-## ⚡ Technologies
+### ⚡ Technologies
 
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3)
@@ -61,7 +30,7 @@ docker system info --format '{{.DockerRootDir}}'
 ![Docker](https://img.shields.io/badge/-Docker-black?style=flat-square&logo=docker)
 ![Nginx](https://img.shields.io/badge/-Nginx-black?style=flat-square&logo=nginx)
 
-### Redes
+#### Redes
 
 [![Linkedin Badge](https://img.shields.io/badge/-Crystina_G-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/crystina-g)
 
