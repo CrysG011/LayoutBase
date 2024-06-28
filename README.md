@@ -2,7 +2,7 @@
 
 Utilizo este proyecto para poner en práctica lo aprendido sobre contenedores y animaciones.
 
-[VER en Gitlab Pages](https://layoutbase-crystinagonz-08fe74406ecbceff0ea6eaa6c57716c32e16cd1.gitlab.io/)
+[IR al sitio](https://layoutbase.pages.dev/)
 
 > [!NOTE]
 > El código original que utiliza docker se encuentra en el repositorio de GitLab
@@ -18,6 +18,7 @@ Utilizo este proyecto para poner en práctica lo aprendido sobre contenedores y 
 ## Optimiza todo posible:
 
 [Reducir emisiones MEJORA la performance](https://ecograder.com/)
+
 [Calcula el impacto de tu sitio web en el planeta](https://www.websitecarbon.com/)
 
 ### ⚡ Technologies
